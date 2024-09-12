@@ -1,0 +1,18 @@
+n1='Marcelo Bouchardet Fellows Bernardes'
+#print(len(n1))
+#print(n1[9::2])
+#print(n1.count('e'))
+#print(n1.count('o',0,4))
+#print(n1.find('deo'))
+#print(n1.find('dos'))
+#print('Curso'in n1)
+#print(n1.replace('Python','Android'))
+#print(n1.upper())
+#print(n1.lower())
+#print(n1.capitalize())
+#print(n1.title())
+#print(n1.split())
+#print('-'.join(n1))
+#n1='  Aprenda Python  '
+#print(n1.strip())
+#print(n1.lstrip())

@@ -1,0 +1,7 @@
+n1=int(input('Um número de 0 a 9999:'))
+n2=str(n1)
+print('Seu número é {}.'.format(n1))
+print('Unidade: {}.'.format(n2 [3]))
+print('Dezena: {}.'.format(n2 [2]))
+print('Centena: {}.'.format(n2 [1]))
+print('Milhar: {}.'.format(n2 [0]))
