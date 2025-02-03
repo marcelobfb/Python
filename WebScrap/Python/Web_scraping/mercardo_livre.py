@@ -1,18 +1,18 @@
 #obtendo produtos do mercado livre a partir de uma buscara realizada pelo usuario
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
+import requests # type: ignore
+from bs4 import BeautifulSoup # type: ignore
+import pandas as pd # type: ignore
 
 lista_produtos=[]
 
 p=str(input('Digite o nome do produto que deseja: '))
 url_base='https://lista.mercadolivre.com.br/'
-url_produto=url_base+p
+url_produto = url_base + p + f"#D[A:{p}]"
 response=requests.get(url_produto)
 site=BeautifulSoup(response.text,'html.parser')
 produtos=site.findAll('div',attrs={'class':'andes-card ui-search-result shops__cardStyles ui-search-result--core andes-card--flat andes-card--padding-16'})
 for produto in produtos:
-    titulo=produto.find('h2',attrs={'class':'ui-search-item__title shops__item-title'})
+    titulo=produto.find('a',attrs={'class':'poly-component_title'})
     moeda=produto.find('span',attrs={'class':'andes-money-amount__currency-symbol'})
     link=produto.find('a',attrs={'class':'ui-search-link'})
     real=produto.find('span',attrs={'class':'andes-money-amount__fraction'})
