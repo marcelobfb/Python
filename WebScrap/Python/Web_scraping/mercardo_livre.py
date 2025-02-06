@@ -10,7 +10,6 @@ url_produto = url_base + p + '#D[A:{p}]'
 response = requests.get(url_produto)
 site = BeautifulSoup(response.text, 'html.parser')
 
-# Usando a classe correta para os produtos
 produtos = site.find_all('li', attrs={'class': 'ui-search-layout__item'})
 
 for produto in produtos:
