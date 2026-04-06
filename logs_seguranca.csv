@@ -1,0 +1,7 @@
+data_hora,usuario,tipo_evento,status
+2023-10-23 08:00,joao.silva,login,sucesso
+2023-10-23 08:05,maria.souza,login,falha
+2023-10-23 08:10,,login,falha
+2023-10-23 08:15,pedro.alves,acesso_arquivo,sucesso
+2023-10-23 08:20,joao.silva,login,
+2023-10-23 08:25,maria.souza,logout,sucesso
